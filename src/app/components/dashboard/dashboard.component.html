@@ -31,8 +31,8 @@
           (click)="toggleProfileMenu()"
         />
         <div class="dropdown" *ngIf="showProfileMenu">
-          <button (click)="navigateToProfile()">View Profile</button>
-          <button (click)="logout()">Logout</button>
+          <button class="view-profile-btn" (click)="navigateToProfile()">View Profile</button>
+          <button class="logout-btn" (click)="logout()">Logout</button>
         </div>
       </div>
     </header>
