@@ -1,4 +1,40 @@
-<div>
-    <h2>Welcome to Dashboard!</h2>
-    <button (click)="logout()">Logout</button>
+<div class="dashboard-container">
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <ul>
+      <li>
+        <a routerLink="/dashboard/products" [routerLinkActive]="'active'" 
+           (click)="activePage = 'products'">
+           Products
+        </a>
+      </li>
+      <!-- Add more links if needed -->
+    </ul>
+  </aside>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <!-- Top Bar -->
+    <header class="top-bar">
+      <h2>Dashboard</h2>
+      <div class="profile-menu">
+        <img
+          src="https://ui-avatars.com/api/?name=User&background=random"
+          alt="Profile Avatar"
+          class="avatar"
+          (click)="toggleProfileMenu()"
+        />
+        <div class="dropdown" *ngIf="showProfileMenu">
+          <p>{{ user?.username }}</p>
+          <p>{{ user?.email }}</p>
+          <button (click)="logout()">Logout</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Dynamic Content -->
+    <section>
+      <router-outlet></router-outlet>  <!-- This will load ProductsComponent -->
+    </section>
   </div>
+</div>
