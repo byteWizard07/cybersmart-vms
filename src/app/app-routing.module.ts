@@ -27,11 +27,11 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AuthGuard } from './guards/auth.guard';
 import { ProductsComponent } from './components/products/products.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
-  
   // Dashboard route with child routes
   { 
     path: 'dashboard', 
@@ -40,9 +40,16 @@ const routes: Routes = [
     children: [
       { path: 'products', component: ProductsComponent },
       { path: 'product-details/:productId', component: ProductDetailsComponent },
+      { path: 'profile', component: ProfileComponent }, 
       { path: '', redirectTo: 'products', pathMatch: 'full' }  // Default child route
     ]
   },
+
+  // { 
+  //   path: 'profile', 
+  //   component: ProfileComponent,  // Profile will be rendered directly when navigating to '/profile'
+  //   canActivate: [AuthGuard] 
+  // },
 
   // Redirect if the user tries to access product directly without being logged in
   { path: '**', redirectTo: '/login' }
