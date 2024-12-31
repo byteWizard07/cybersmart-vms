@@ -1,0 +1,26 @@
+<div class="products-container">
+    <div class="search-bar">
+      <input
+        type="text"
+        placeholder="Search products..."
+        [(ngModel)]="searchTerm"
+        (input)="onSearch()"
+      />
+    </div>
+    <div class="product-grid">
+      <div
+        class="product-card"
+        *ngFor="let product of products"
+        (click)="viewProductDetails(product.id)"
+      >
+        <img [src]="product.thumbnail || placeholderImage" alt="{{ product.title }}" />
+        <h3>{{ product.title }}</h3>
+        <p>{{ product.description | slice: 0:100 }}...</p>
+        <p><strong>Price:</strong> ${{ product.price }}</p>
+      </div>
+    </div>
+    <div class="pagination-controls">
+      <button (click)="loadMore()" [disabled]="isLoading">Load More</button>
+    </div>
+  </div>
+  
