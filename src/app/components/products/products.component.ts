@@ -76,7 +76,8 @@ export class ProductsComponent implements OnInit {
   }
 
   viewProductDetails(productId: number): void {
-    this.router.navigate(['/product-details', productId]);
+    console.log('Navigating to product details:', productId);  // Add logging
+  this.router.navigate(['/dashboard/product-details', productId]);
   }
 }
 

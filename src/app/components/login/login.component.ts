@@ -28,6 +28,7 @@ export class LoginComponent {
     // Proceed with login if validation passes
     this.authService.login(this.username, this.password).subscribe({
       next: (response) => {
+        console.log('Login response:', response);
         this.authService.setToken(response.token);
         this.authService.setUserDetails(response);
         this.router.navigate(['/dashboard']); // Redirect to dashboard on successful login

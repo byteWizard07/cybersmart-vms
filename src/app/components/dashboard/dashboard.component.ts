@@ -42,7 +42,7 @@ export class DashboardComponent {
   navigateTo(page: string): void {
     this.activePage = page;
     if (page === 'products') {
-      this.router.navigate(['/products']);
+      this.router.navigate(['/dashboard/products']);
     }
   }
 
