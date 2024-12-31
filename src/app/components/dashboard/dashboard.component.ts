@@ -33,11 +33,17 @@ export class DashboardComponent {
 
   constructor(private authService: AuthService, private router: Router) {
     this.user = this.authService.getUserDetails(); // Fetch user details from the service
+    console.log('Fetched User Details:', this.user);
   }
 
   toggleProfileMenu(): void {
     this.showProfileMenu = !this.showProfileMenu;
   }
+
+  navigateToProfile(): void {
+    this.showProfileMenu = false; // Close the dropdown
+    this.router.navigate(['/dashboard/profile']); // Navigate to the profile route
+  }  
 
   navigateTo(page: string): void {
     this.activePage = page;

@@ -6,10 +6,13 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { FormsModule } from '@angular/forms';
+import { ProfileComponent } from './components/profile/profile.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
     AppComponent,
+   
    
     
   ],
@@ -18,8 +21,10 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     HttpClientModule, 
     FormsModule,
+    RouterModule,
     LoginComponent,
-    DashboardComponent
+    DashboardComponent,
+    ProfileComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
