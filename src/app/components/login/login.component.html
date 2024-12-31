@@ -1,26 +1,39 @@
-<div>
-  <h2>Login</h2>
-  <form (ngSubmit)="onLogin()">
-    <!-- Username Field -->
-    <label>
-      Username:
-      <input type="text" [(ngModel)]="username" name="username" />
-      <span class="error" *ngIf="errorMessage && !username">Username is required.</span>
-    </label>
+<div class="login-container">
+  <div class="left-side">
+    <!-- Background image section -->
+    <div class="background-overlay">
+      <h1>Welcome Back!</h1>
+      <p>Sign in to continue</p>
+    </div>
+  </div>
 
-    <!-- Password Field -->
-    <label>
-      Password:
-      <input type="password" [(ngModel)]="password" name="password" />
-      <span class="error" *ngIf="errorMessage && !password">Password is required.</span>
-    </label>
+  <div class="right-side">
+    <!-- Login Form -->
+    <div class="form-container">
+      <h2>Login</h2>
+      <form (ngSubmit)="onLogin()">
+        <!-- Username Field -->
+        <label>
+          Username:
+          <input type="text" [(ngModel)]="username" name="username" />
+          <span class="error" *ngIf="errorMessage && !username">Username is required.</span>
+        </label>
 
-    <!-- General error message for invalid credentials -->
-    <span class="error" *ngIf="errorMessage && (username || password)">
-      {{ errorMessage }}
-    </span>
+        <!-- Password Field -->
+        <label>
+          Password:
+          <input type="password" [(ngModel)]="password" name="password" />
+          <span class="error" *ngIf="errorMessage && !password">Password is required.</span>
+        </label>
 
-    <!-- Submit Button -->
-    <button type="submit">Login</button>
-  </form>
+        <!-- General error message for invalid credentials -->
+        <span class="error" *ngIf="errorMessage && (username || password)">
+          {{ errorMessage }}
+        </span>
+
+        <!-- Submit Button -->
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  </div>
 </div>
