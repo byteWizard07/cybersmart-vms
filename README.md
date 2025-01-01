@@ -127,3 +127,6 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 
 ![Profile Page](public/screenshots/profile.png)
 
+
+## Thank You for Reading:)
+
