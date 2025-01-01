@@ -108,3 +108,22 @@ ng e2e
 ```
 
 Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+
+## Preiew of the project:
+
+#### Login Page
+
+![login Page](public/screenshots/login.png)
+
+#### Dashboard and Sidebar
+
+![Dashboard](public/screenshots/dashboard.png)
+
+#### View Profile - Logout - Load More
+
+![Load More and Logout](public/screenshots/Load_more_Logout.png)
+
+#### Profile Page
+
+![Profile Page](public/screenshots/profile.png)
+
