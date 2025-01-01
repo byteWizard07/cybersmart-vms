@@ -4,6 +4,14 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 
 ## Development server
 
+#### Clone Project using Git:
+
+To clone Project using HTTP, Run on terminal:
+
+```bash
+git clone https://github.com/byteWizard07/cybersmart-vms.git
+```
+
 #### Check if Node.js and npm(node package manager) is installed on local or not, if not first install it:
 
 To Check if Node.js and npm is installed or not, Run on command prompt or windows terminal - 
@@ -13,7 +21,38 @@ node -v
 npm -v
 ```
 
-To start a local development server, run:
+#### Navigate to the Project directory:
+
+Use the terminal to Navigate to the Project folder:
+
+```bash
+cd /path/to/your/project
+```
+
+#### Install Angular CLI (if not already installed)
+
+Check if Angular CLI is installed:
+
+```bash
+ng version
+```
+
+If it's not installed, install it globally:
+
+```bash
+npm install -g @angular/cli
+```
+
+#### Install Project dependencies:
+
+Run the following Command in the project directory to install the required packages:
+
+```bash
+npm install
+```
+
+
+#### To start a local development server, run:
 
 ```bash
 ng serve
