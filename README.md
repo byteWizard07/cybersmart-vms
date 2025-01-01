@@ -4,6 +4,15 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 
 ## Development server
 
+#### Check if Node.js and npm(node package manager) is installed on local or not, if not first install it:
+
+To Check if Node.js and npm is installed or not, Run on command prompt or windows terminal - 
+
+```bash
+node -v
+npm -v
+```
+
 To start a local development server, run:
 
 ```bash
